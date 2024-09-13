@@ -1,18 +1,50 @@
 /* CSS Reset */
+:root {
+    --grid-width: 6000px;
+    --grid-cell-width: 32px;
+    --grid-cell-height: 32px;
+    --grid-border: 1px solid #ccc;
+    --grid-background: #eee;
+
+    --panel-background: #ccc;
+    --panel-width: 280px;
+}
 body, html {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding:0;
-    overflow:hidden;
-    background-color: gray;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--grid-background);
+}
+#panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--panel-width);
+    height: 100%;
+    background: var(--panel-background);
 }
 #grid {
-    background-color: gray;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(var(--grid-cell-width), var(--grid-cell-width))
+    );
+    grid-template-rows: repeat(
+        auto-fit, 
+        minmax(var(--grid-cell-height), var(--grid-cell-height))
+    );
+    position: absolute;
+    top: 0;
+    left: var(--panel-width);
+    width: var(--grid-width);
+    height: 100%;
+    background: var(--grid-background);
 }
 .cell {
-    width: 16px;
-    height: 16px;
+    width: var(--grid-cell-width);
+    height: var(--grid-cell-height);
+    border-bottom: var(--grid-border);
+    border-right: var(--grid-border);
 }
