@@ -6,8 +6,9 @@
     --grid-border: 1px solid #ccc;
     --grid-background: #eee;
 
-    --panel-background: #ccc;
-    --panel-width: 280px;
+    --panel-background: #eee;
+    --panel-width: 300px;
+    --panel-border: 1px solid #888;
 }
 body, html {
     width: 100%;
@@ -19,11 +20,25 @@ body, html {
 }
 #panel {
     position: absolute;
+    z-index: 10;
     top: 0;
     left: 0;
+    min-width: 280px;
     width: var(--panel-width);
     height: 100%;
     background: var(--panel-background);
+    display: flex;
+    justify-content: space-between;
+    border-right: var(--panel-border);
+}
+#panel-content {
+    width: 100%;
+}
+#panel-resizer {
+    width: 3px;
+}
+#panel-resizer:hover {
+    cursor: col-resize;
 }
 #grid {
     display: grid;
@@ -36,10 +51,10 @@ body, html {
         minmax(var(--grid-cell-height), var(--grid-cell-height))
     );
     position: absolute;
+    z-index: 5;
     top: 0;
     left: var(--panel-width);
     width: var(--grid-width);
-    height: 100%;
     background: var(--grid-background);
 }
 .cell {
