@@ -3,7 +3,8 @@ window.addEventListener('DOMContentLoaded', () => {
     var panel = document.getElementById('panel');
     var panelResizerDiv = document.getElementById('panel-resizer');
 
-    gridCells(grid);
-    gridDrag(grid);
     panelResizer(panelResizerDiv, panel);
+
+    gridCells(grid, 100000);
+    gridDrag(grid);
 });
