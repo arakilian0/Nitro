@@ -1,0 +1,22 @@
+#panel {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    min-width: 280px;
+    width: var(--panel-width);
+    height: 100%;
+    background: var(--panel-background);
+    display: flex;
+    justify-content: space-between;
+    border-right: var(--panel-border);
+}
+#panel-content {
+    width: 100%;
+}
+#panel-resizer {
+    width: 3px;
+}
+#panel-resizer:hover {
+    cursor: col-resize;
+}

@@ -1,0 +1,23 @@
+#grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(var(--grid-cell-width), var(--grid-cell-width))
+    );
+    grid-template-rows: repeat(
+        auto-fit, 
+        minmax(var(--grid-cell-height), var(--grid-cell-height))
+    );
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: var(--panel-width);
+    width: var(--grid-width);
+    background: var(--grid-background);
+}
+.cell {
+    width: var(--grid-cell-width);
+    height: var(--grid-cell-height);
+    border-bottom: var(--grid-border);
+    border-right: var(--grid-border);
+}
