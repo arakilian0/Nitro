@@ -6,5 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
     panelResizer(panelResizerDiv, panel);
 
     gridCells(grid, 100000);
+    gridScroll(grid);
     gridDrag(grid);
 });
