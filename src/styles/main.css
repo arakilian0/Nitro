@@ -1,13 +1,18 @@
 :root {
-    --grid-width: 6000px;
+    --grid-width: 20000px;
+    --grid-top: -8000px;
+    --grid-left: -8000px;
     --grid-cell-width: 32px;
     --grid-cell-height: 32px;
     --grid-border: 1px solid #ccc;
     --grid-background: #eee;
+    --grid-index: 5;
 
     --panel-background: #eee;
+    --panel-min-width: 300px;
     --panel-width: 300px;
     --panel-border: 1px solid #888;
+    --panel-index: 10;
 }
 body, html {
     width: 100%;

@@ -9,9 +9,9 @@
         minmax(var(--grid-cell-height), var(--grid-cell-height))
     );
     position: absolute;
-    z-index: 5;
-    top: 0;
-    left: var(--panel-width);
+    z-index: var(--grid-index);
+    top: var(--grid-top);
+    left: var(--grid-left);
     width: var(--grid-width);
     background: var(--grid-background);
 }
