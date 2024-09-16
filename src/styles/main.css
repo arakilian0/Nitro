@@ -9,7 +9,10 @@
     --grid-index: 5;
 
     --panel-background: #eee;
-    --panel-min-width: 300px;
+    --panel-resizer-width: 3px;
+    --panel-resize-cursor: col-resize;
+    --panel-min-width: 200px;
+    --panel-max-width: 500px;
     --panel-width: 300px;
     --panel-border: 1px solid #888;
     --panel-index: 10;
