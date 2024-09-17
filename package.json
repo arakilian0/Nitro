@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "electron src/app.js"
+    "start": "electron src/main.js"
   },
   "keywords": [
     "desktop, application, tilemap"

@@ -1,11 +1,30 @@
-window.addEventListener('DOMContentLoaded', () => {
-    var grid = document.getElementById('grid');
-    var panel = document.getElementById('panel');
-    var panelResizerDiv = document.getElementById('panel-resizer');
+const { app, BrowserWindow } = require('electron/main')
+const path = require('node:path')
 
-    panelResizer(panelResizerDiv, panel);
+function createWindow () {
+  const win = new BrowserWindow({
+    width: 1200,
+    height: 900,
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
+    }
+  })
 
-    gridCells(grid, 300000);
-    gridZoom(grid);
-    gridDrag(grid);
-});
+  win.loadFile('index.html')
+}
+
+app.whenReady().then(() => {
+  createWindow()
+
+  app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createWindow()
+    }
+  })
+})
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
