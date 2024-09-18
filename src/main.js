@@ -1,5 +1,9 @@
-const { app, BrowserWindow } = require('electron/main')
-const path = require('node:path')
+const { app, BrowserWindow, ipcMain } = require('electron/main');
+const path = require('node:path');
+
+// IPC Modules
+const getStore = require('./ipc/getStore.js');
+const setStore = require('./ipc/setStore.js');
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -8,23 +12,28 @@ function createWindow () {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
-  })
+  });
 
-  win.loadFile('index.html')
-}
+  win.loadFile('index.html');
+};
 
 app.whenReady().then(() => {
-  createWindow()
+
+  // IPC Handles
+  ipcMain.handle('dialog:getStore', getStore);
+  ipcMain.on('dialog:setStore', setStore);
+
+  createWindow();
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow()
+      createWindow();
     }
   })
-})
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit()
+    app.quit();
   }
-})
+});
