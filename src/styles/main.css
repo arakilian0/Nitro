@@ -12,8 +12,7 @@
     --panel-resizer-width: 3px;
     --panel-resize-cursor: col-resize;
     --panel-min-width: 200px;
-    --panel-max-width: 500px;
-    --panel-width: 300px;
+    --panel-max-width: 760px;
     --panel-border: 1px solid #888;
     --panel-index: 10;
 }
@@ -24,4 +23,7 @@ body, html {
     padding: 0;
     overflow: hidden;
     background-color: var(--grid-background);
+}
+#wrapper {
+    display: none;
 }

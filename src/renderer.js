@@ -1,8 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
+    var wrapper = document.getElementById('wrapper');
     var grid = document.getElementById('grid');
     var panel = document.getElementById('panel');
     var panelResizerDiv = document.getElementById('panel-resizer');
 
+    wrapper.style.display = 'block';
     panelResizer(panelResizerDiv, panel);
 
     gridCells(grid, 300000);

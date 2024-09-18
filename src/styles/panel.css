@@ -5,7 +5,7 @@
     left: 0;
     min-width: var(--panel-min-width);
     max-width: var(--panel-max-width);
-    width: var(--panel-width);
+    width: 300px;
     height: 100%;
     background: var(--panel-background);
     display: flex;

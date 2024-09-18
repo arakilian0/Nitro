@@ -7,14 +7,19 @@ const setStore = require('./ipc/setStore.js');
 
 function createWindow () {
   const win = new BrowserWindow({
-    width: 1200,
-    height: 900,
+    width: getStore().windowWidth,
+    height: getStore().windowHeight,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   });
 
   win.loadFile('index.html');
+
+  win.on('resize', function() {
+    setStore(null, 'windowWidth', win.getSize()[0]);
+    setStore(null, 'windowHeight', win.getSize()[1]);
+  });
 };
 
 app.whenReady().then(() => {
