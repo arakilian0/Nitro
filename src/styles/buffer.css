@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 #buffer-wheel {
-  color: #1c4c5b;
+  color: var(--buffer-color);
   display: inline-block;
   position: relative;
   width: 80px;

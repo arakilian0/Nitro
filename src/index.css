@@ -16,6 +16,8 @@
     --panel-max-width: 760px;
     --panel-border: 1px solid #888;
     --panel-index: 10;
+
+    --buffer-color: #000;
 }
 body, html {
     width: 100%;
