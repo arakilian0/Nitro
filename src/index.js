@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         wrapper.style.display = 'block';
         buffer.remove();
-    }, "3000");
+    }, "2500");
 
     panelResizer(panelResizerDiv, panel);
 
