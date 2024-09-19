@@ -1,6 +1,6 @@
 async function panelResizer (resizer, panel) {
     const store = await window.nitro.getStore();
-    panel.style.width = store.panelWidth;
+    panel.style.width = store.panelWidth + 'px';
 
     resizer.addEventListener('click', initDrag, false);
     
@@ -20,7 +20,7 @@ async function panelResizer (resizer, panel) {
     }
     
     function stopDrag(e) {
-        window.nitro.setStore('panelWidth', (startWidth + e.clientX - startX) + 'px');
+        window.nitro.setStore('panelWidth', (startWidth + e.clientX - startX));
         document.documentElement.removeEventListener('mousemove', doDrag, false);
         document.documentElement.removeEventListener('mouseup', stopDrag, false);
     }
