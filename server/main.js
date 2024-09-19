@@ -10,11 +10,11 @@ function createWindow () {
     width: getStore().windowWidth,
     height: getStore().windowHeight,
     webPreferences: {
-      preload: path.resolve('electron', 'preload.js')
+      preload: path.resolve('server', 'preload.js')
     }
   });
 
-  win.loadFile(path.resolve('src', 'index.html'));
+  win.loadFile(path.resolve('client', 'index.html'));
 
   win.on('resize', function() {
     setStore(null, 'windowWidth', win.getSize()[0]);
