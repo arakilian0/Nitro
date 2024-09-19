@@ -11,6 +11,7 @@
     --panel-background: #eee;
     --panel-resizer-width: 3px;
     --panel-resize-cursor: col-resize;
+    --panel-width: 300px;
     --panel-min-width: 200px;
     --panel-max-width: 760px;
     --panel-border: 1px solid #888;
@@ -23,6 +24,7 @@ body, html {
     padding: 0;
     overflow: hidden;
     background-color: var(--grid-background);
+    font-family: 'Helvetica';
 }
 #wrapper {
     display: none;
