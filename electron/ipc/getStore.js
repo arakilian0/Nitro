@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 function getStore () {
-    const file = path.join(path.resolve(), 'data', 'store.json');
+    const file = path.resolve('data', 'store.json');
 
     if (fs.existsSync(file)) {
         try {

@@ -3,7 +3,7 @@ const path = require('node:path');
 var store = require('./getStore.js')();
 
 function setStore (event, K, V) {
-    const file = path.join(path.resolve(), 'data', 'store.json');
+    const file = path.resolve('data', 'store.json');
 
     if (store) {
         for (let key in store) {
