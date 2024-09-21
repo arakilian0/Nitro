@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "electron server/main.js",
-    "build": "rm -rf client && webpack --mode development"
+    "build": "rm -rf client && webpack --watch --mode development"
   },
   "keywords": [
     "desktop, application, tilemap"
