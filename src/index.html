@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="http://localhost:8097"></script>
+<head>
+    <meta charset="UTF-8">
     <title>Nitro</title>
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles/buffer.css">
+    <link rel="stylesheet" href="./styles/panel.css">
+    <link rel="stylesheet" href="./styles/grid.css">
+</head>
+<body>
+    <div id="buffer-wrapper">
+        <div id="buffer">
+            <div id="buffer-wheel"><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="panel">
+            ss
+        </div>
+        <div id="grid"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./scripts/gridCells.js"></script>
+    <script src="./scripts/gridZoom.js"></script>
+    <script src="./scripts/gridDrag.js"></script>
+    <script src="./scripts/panelResizer.js"></script>
+    <script src="./index.js"></script>
+</body>
 </html>

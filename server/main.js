@@ -14,7 +14,7 @@ function createWindow () {
     }
   });
 
-  win.loadFile(path.resolve('client', 'index.html'));
+  win.loadFile(path.resolve('src', 'index.html'));
 
   win.on('resize', function() {
     setStore(null, 'windowWidth', win.getSize()[0]);
